@@ -6,4 +6,4 @@ se modela a través de funciones a las que se les conoce con el nombre de métod
 
 ![](ejemplo_clase.png)
 
-__*Es importante entender que la instanciación de un objeto, es heredar sus atributos y métodos a partir de la clase ya creada__
+__*Es importante entender que la instanciación de un objeto, es heredar sus atributos y métodos a partir de la clase ya creada*__
