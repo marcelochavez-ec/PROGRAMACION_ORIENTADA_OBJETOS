@@ -5,3 +5,5 @@ estado y una funcionalidad relacionadas. El estado del objeto se define a travé
 se modela a través de funciones a las que se les conoce con el nombre de métodos del objeto.
 
 ![](ejemplo_clase.png)
+
+__*Es importante entender que la instanciación de un objeto, es heredar sus atributos y métodos a partir de la clase ya creada__
