@@ -7,8 +7,11 @@ se modela a través de funciones a las que se les conoce con el nombre de métod
 ![](ejemplo_clase.png)
 
 __*Es importante entender que la instanciación de un objeto, es heredar sus atributos y métodos a partir de la clase ya creada*__
-:::Python
-'class Auto():
+
+:::python
+
+import misModulos as modulos
+class Auto():
     largoChasis=250
     anchoChasis=120
     ruedas=4
@@ -27,25 +30,3 @@ __*Es importante entender que la instanciación de un objeto, es heredar sus atr
             return "El Auto está en marcha"
         else:
             return "El Auto está parado"
-
-#===============================================================================
-# PRIMER EJERCICIO:
-
-miAuto = Auto()
-print("------------------------PRIMER EJERCICIO---------------------------")
-print("El tipo de objeto de la instanciar la clase Auto: ", miAuto.__class__)
-print("El largo del Auto es: ", miAuto.largoChasis)
-print(miAuto.arrancar(True))
-print(miAuto.estado())
-
-#===============================================================================
-# SEGUNDO EJERCICIO:
-
-mi_Auto_2 = Auto()
-print(mi_Auto_2.arrancar(False))
-print("------------------------SEGUNDO EJERCICIO---------------------------")
-print("El tipo de objeto de la instanciar la clase Auto: ", miAuto.__class__)
-print("El largo del Auto es: ", miAuto.largoChasis)
-print("El número de neumáticos son: ", miAuto.ruedas)
-print(mi_Auto_2.estado())
-'
