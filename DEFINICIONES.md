@@ -13,22 +13,42 @@ __*Es importante entender que la instanciación de un objeto, es heredar sus atr
 [google]: http://www.google.com/ "clic para visitar Google.com
 
 ``` python hl_lines="3 8"
-class Auto():
-    largoChasis=250
-    anchoChasis=120
-    ruedas=4
-    enmarcha=False
+class Mobile():
 
-    def arrancar(self,arrancamos):
-        self.enmarcha=arrancamos
-        if (self.enmarcha):
-            return "El auto está en marcha"
+    def __init__(self,dimension,chip,mark,number):
+        self.dimension = dimension
+        self.chip= chip
+        self.mark = mark
+        self.number = number
+        self.state_on = True
+        print('Your phone have dimension: ',self.dimension)
+        print('Your phone con chip: ',self.chip)
+        print('Your phone is mark: ',self.mark)
+        print('Your phone is number: ',self.number)
+        
+    def turn_on(self,state_on):
+        if self.state_on:
+            return "mobile phone {} is turned on".format(self.number)
         else:
-            return "El auto está parado"
+            pass
 
-    def estado(self):
-        print("El auto tiene ", self.ruedas, " ruedas. Un ancho de ", self.anchoChasis, " y un lardo de ", self.largoChasis)
-        if(self.enmarcha):
-            return "El Auto está en marcha"
+    def turn_off(self,state_off):
+        self.state_off=True
+        if self.state_off:
+            return 'mobile phone is turned off'
         else:
-            return "El Auto está parado"
+            pass
+
+    def call(self,number_call):
+        self.number_call = int(input("Enter the number you want to call: "))
+        print('Calling number: ',self.number_call)
+
+print('Mobile Phone 1')
+Phone_1 = Mobile('25*12','xbz1','Iphone',983332687)
+print('Mobile Phone 2')
+Phone_2 = Mobile('25*30','kmer3','Samsung',36525589)
+
+Phone_1.turn_on(True)
+Phone_2.turn_on(True)
+Phone_1.call(123)
+Phone_1.turn_off(False)
