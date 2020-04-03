@@ -8,7 +8,9 @@ se modela a través de funciones a las que se les conoce con el nombre de métod
 
 __*Es importante entender que la instanciación de un objeto, es heredar sus atributos y métodos a partir de la clase ya creada*__
 
-### A continuación un ejemplo de una clase coche
+#### A continuación un ejemplo de una clase coche
+[logo]: http://www.google.com/images/logo.gif
+[google]: http://www.google.com/ "clic para visitar Google.com
 
 ``` python hl_lines="3 8"
 class Auto():
