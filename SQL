@@ -5,3 +5,14 @@ select i01,count(*) from urs.bono_covid_indice group by i01 order by 2 desc
 ### SQL obtener una muestra aleatoria:
 
 select * from urs.bono_covid_indice order by random() limit 1000;
+
+### SQL para obtener el peso de cada tabla de una BDD PostgreSQL:
+
+SELECT nspname || '.' || relname AS "tabla",
+pg_size_pretty(pg_total_relation_size(c.oid)) AS "tamanio"
+FROM pg_class c
+LEFT JOIN pg_namespace n ON (n.oid = c.relnamespace)
+WHERE n.nspname NOT IN ('pg_catalog', 'information_schema') AND
+c.relkind <> 'i' AND
+n.nspname !~ '^pg_toast'
+ORDER BY pg_total_relation_size(c.oid);
