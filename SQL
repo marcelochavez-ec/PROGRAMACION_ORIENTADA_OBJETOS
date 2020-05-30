@@ -1,0 +1,7 @@
+### SQL muestras:
+
+select i01,count(*) from urs.bono_covid_indice group by i01 order by 2 desc
+
+### SQL registros aleatorios:
+
+select * from urs.bono_covid_indice order by random() limit 1000;
